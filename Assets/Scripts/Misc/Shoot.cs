@@ -14,6 +14,7 @@ public class Shoot : MonoBehaviour
     public Transform spawnPointDiag;
     public Transform spawnPointDiagLeft;
     public Transform spawnPointUp;
+    public Transform spawnPointUpLeft;
     public Transform spawnPointCrouchR;
     public Transform spawnPointCrouchL;
 
@@ -77,9 +78,18 @@ public class Shoot : MonoBehaviour
             Projectile curProjectile = Instantiate(projectilePrefab, spawnPointUp.position, spawnPointUp.rotation);
             curProjectile.speed = 0;
             curProjectile.speedUp = 12;
-
+        }
+        else
+       
+        {
+            Projectile curProjectile = Instantiate(projectilePrefab, spawnPointUpLeft.position, spawnPointUpLeft.rotation);
+            curProjectile.speed = 0;
+            curProjectile.speedUp = 12;
         }
        
+
+
+        
     }
     public void FireCrouch()
     {
